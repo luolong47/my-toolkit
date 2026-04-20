@@ -1,0 +1,63 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-surface: var(--surface);
+  --color-surface-hover: var(--surface-hover);
+  --color-border: var(--border);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-ring: var(--ring);
+}
+
+@layer base {
+  :root {
+    --background: #fdfdfc;
+    --foreground: #111110;
+    --surface: #f3f3f2;
+    --surface-hover: #eaeaeb;
+    --border: #e3e3e2;
+    --muted: #f2f2f1;
+    --muted-foreground: #6b6b69;
+    --accent: #111110;
+    --accent-foreground: #ffffff;
+    --ring: rgba(17, 17, 16, 0.2);
+  }
+
+  .dark {
+    --background: #0d0d0c;
+    --foreground: #ededea;
+    --surface: #171716;
+    --surface-hover: #222221;
+    --border: #2c2c2b;
+    --muted: #1f1f1e;
+    --muted-foreground: #9a9a97;
+    --accent: #ededea;
+    --accent-foreground: #111110;
+    --ring: rgba(237, 237, 234, 0.2);
+  }
+}
+
+@layer base {
+  * {
+    border-color: var(--border);
+  }
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    @apply antialiased;
+  }
+}
+
+@layer utilities {
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-none {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+}
