@@ -1,7 +1,37 @@
-node_modules/
-.next/
-coverage/
-.DS_Store
-*.log
-.env*
+# dependencies
+/node_modules
+/.pnpm-debug.log*
+
+# build outputs
+/.next/
+/out/
+/dist/
+/build
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# local env files
+.env*.local
+.env
 !.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
